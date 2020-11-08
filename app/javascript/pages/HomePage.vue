@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col>
-        <h1 id='top-font' class="text-center mt-10">コンスタ</h1>
+        <h1 id='top-font' class="text-center mt-5">コンスタ</h1>
         <div class="mt-2">
           <p class="text-center font-weight-bold sub-title1"><span>環境・目標・習慣</span></p>
           <p class="text-center mt-1 sub-title2 ">この3つを身につけて勉強を継続させよう</p>
@@ -36,7 +36,10 @@ export default {
     return {
       message: "Hello Vue!"
     }
-  }
+  },
+  // computed: {
+  //   switch
+  // }
 }
 </script>
 
