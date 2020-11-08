@@ -8,23 +8,22 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
-import App from '../app.vue'
+import App from '../pages/app.vue'
 
 Vue.use(Vuetify);
 const vuetify = new Vuetify();
 
+// DOMの読み込みが完了したらアロー関数内の処理を行う
 document.addEventListener('DOMContentLoaded', () => {
+  const el = document.body.appendChild(document.createElement('hello'))
   const app = new Vue({
+    el,
     vuetify,
-    icons: {
-      iconfont: 'mdi',
-    },
+    // icons: {
+    //   iconfont: 'mdi',
+    // },
     render: h => h(App)
-  }).$mount()
-  document.body.appendChild(app.$el)
-
-  console.log(app)
-  console.log(app.$el)
+  })
 })
 
 
