@@ -11,7 +11,7 @@
     </v-row>
     <v-row>
       <v-col class="text-center mt-10">
-        <v-btn rounded color="light-blue lighten-3 mr-2">
+        <v-btn rounded color="light-blue lighten-3 mr-2" @click="toSignUp">
           新規登録
         </v-btn>
         <v-btn rounded color="cyan lighten-3 ml-2">
@@ -37,6 +37,11 @@ export default {
       message: "Hello Vue!"
     }
   },
+  methods: {
+    toSignUp() {
+      this.$router.push({ path: "signup" });
+    },
+  }
   // computed: {
   //   switch
   // }

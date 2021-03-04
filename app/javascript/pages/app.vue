@@ -15,11 +15,13 @@ import VueRouter from 'vue-router';
 
 import HomePage from './HomePage.vue';
 import Header from '../components/Header';
+import SignUp from './SingUp';
 
 const router = new VueRouter({
-  // mode: 'history',
+  mode: 'history',
   routes: [
-    { path: '/', component: HomePage }
+    { path: '/', component: HomePage },
+    { path: '/signup', component: SignUp }
   ]
 })
 
