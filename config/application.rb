@@ -15,5 +15,16 @@ module ContinueStudy
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # クロスオリジンを許可する
+    config.middleware.use Rack::Cors do
+      allow do
+        origins "*"
+        resource '/api/v1/*',
+          headers: :any,
+          expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+          methods: [:get, :post, :options, :put, :delete]
+      end
+    end
   end
 end

@@ -15,15 +15,14 @@ const vuetify = new Vuetify();
 
 // DOMの読み込みが完了したらアロー関数内の処理を行う
 document.addEventListener('DOMContentLoaded', () => {
-  const el = document.body.appendChild(document.createElement('hello'))
   const app = new Vue({
-    el,
     vuetify,
     // icons: {
     //   iconfont: 'mdi',
     // },
     render: h => h(App)
-  })
+  }).$mount()
+  document.body.appendChild(app.$el)
 })
 
 

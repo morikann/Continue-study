@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar color="blue lighten-3">
-      <v-toolbar-title class="font-weight-bold">コンスタ</v-toolbar-title>
+      <v-toolbar-title class="font-weight-bold" @click="toTop">Continue Study</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>mdi-dots-vertical</v-icon>
@@ -15,13 +15,16 @@
 export default {
   data: function () {
     return {
-      message: "Hello Vue!"
+      message: "Hello Vuejs!"
     }
   },
-  // computed: {
-  //   switch
-  // }
+  methods: {
+    toTop() {
+      this.$router.push({ path: '/' });
+    }
+  }
 }
 </script>
 
 <style scoped lang="scss">
+</style>
